@@ -1,5 +1,5 @@
-Escape sequence :
-Purpose: to alignment purpose
+Escape sequence :Also known as Format specifier
+Purpose         :Proper alignment
 
 
 \n -----> cursor moves to new line
