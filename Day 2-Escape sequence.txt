@@ -1,14 +1,14 @@
 Escape sequence :
- Purpose: to alignment purpose
+Purpose: to alignment purpose
 
 
-\n cursor moves to new line
-\t tab space
-\b backspace
-\r overwritten
-\" double quotes
-\' single quotes
-\\ single slash
+\n -----> cursor moves to new line
+\t ----->tab space
+\b ----->backspace
+\r ----->overwritten
+\" ----->double quotes
+\' ----->single quotes
+\\ ----->single slash
 
 Program:
 class Sample
