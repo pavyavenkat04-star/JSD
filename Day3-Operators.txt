@@ -2,7 +2,7 @@ Arithmetic Operators:
 =====================
 Addition 		+
 Subtraction		-
-Multiplication	        *
+Multiplication	      *
 Division		/
 Modulus			%
 
