@@ -179,4 +179,65 @@ Increment Operator:
 ===================
 Used to increase the value of the variable by 1.
 i)Pre Increment
+Increases the value of the variable by 1 and stores the same value.
         eg:++count
+ii)Post Increment
+Stores the current value in the variable but for further actions increases the value of the variable by 1.
+        eg:count++
+
+Eg:
+int a=100;
+System.out.println(a++);//prints 100
+System.out.println(a);//prints 101
+System.out.println(++a);//prints 102
+System.out.println(a++);//prints 102
+System.out.println(++a);//prints 104
+System.out.println(a);//prints 104
+
+
+Decrement Operator:
+===================
+Used to decrease the value of the variable by 1.
+i)Pre Decrement:
+Eg:--count
+ii)Post Decrement:
+Eg:count--
+Eg: int s=113;
+System.out.println(s--);//prints 113
+System.out.println(s);//prints 112
+System.out.println(--s);//prints 111
+System.out.println(s--);//prints 111
+System.out.println(s);//prints 110
+
+
+Conditional/Ternary Operators:
+==============================
+short form of if-else statement
+Uses three operands.
+        i)condition
+        ii)expression when condition is true
+        iii)expression when condition is false
+Syntax:
+variable=condition?True_part:False_part;
+Eg:
+int a=10,b=3;
+c=(a>b)?a:b;//c=(10>3)?10:3
+System.out.println(c);//prints 10
+
+Bitwise Operators:
+==================
+Bitwise AND(&)
+Bitwise OR(|)
+Bitwise NOT(~)
+Bitwise XOR(^)
+        
+Truth Table:
+a        b        AND        OR        XOR
+True     True     True       True      False
+False    True     False      True      True
+True     False    False      True      True
+False    False    False      False     False
+
+a        NOT
+True     False
+False    True
