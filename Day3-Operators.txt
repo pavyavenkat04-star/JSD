@@ -164,3 +164,19 @@ false
 true
 true
 
+
+Assignment Operator:
+=====================
+Used to assign or store a value in a variable.
+Eg:
+a+=10 (or) a=a+10
+a-=5 (or) a=a-5
+a*=2 (or) a=a*2
+a/=5 (or) a=a/5
+a%=3 (or) a=a%3
+
+Increment Operator:
+===================
+Used to increase the value of the variable by 1.
+i)Pre Increment
+        eg:++count
