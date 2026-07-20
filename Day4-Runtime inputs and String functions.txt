@@ -114,12 +114,26 @@ compareTo():
 	-compares the ascii value of the letters of the string and returns their difference.
 hashCode():
 	-returns the ascii value of the given letter.
+startsWith():
+	-checks whether the string starts with the given string.
+endswith():
+	-checks whether the string ends with the given string.
+replace():
+	-prints the string with the newly given characters.
+repeat():
+	-repeats the string for the given number of strings.
+split():
+	-splits the string with respect to the specified characters.
+matches():
+	-used to check if any matches found in between the strings.
+
+
 
 
 Program:
 public class Strfun {
     public static void main(String[] args) {
-        String name="pavYA";
+         String name="pavYA";
                 System.out.println(name.toUpperCase());
                 System.out.println(name.toLowerCase());
                 System.out.println(name);
@@ -136,9 +150,24 @@ public class Strfun {
                 System.out.println("p".hashCode());
                 System.out.println("a".hashCode());
                 System.out.println("e".hashCode());
-        }
-    
+                System.out.println("starts with:"+name.startsWith("Pa"));
+                System.out.println("starts with:"+name.startsWith("pa"));
+                System.out.println(name.replace('Y','j'));
+                System.out.println("ends with:"+name.endsWith("ya"));
+                System.out.println("ends with:"+name.endsWith("YA"));
+                System.out.println(""+name.repeat(10));
+                name="kal,vi,edu,cat,ion";
+             String arr[]=name.split(",");
+             System.out.println(arr[0]);
+             System.out.println(arr[3]);
+             System.out.println(arr.length);
+             name="goat";
+             System.out.println(name.matches(".at"));
+
+    }
 }
+
+
 Output:
 PAVYA
 pavya
@@ -156,3 +185,13 @@ pavYA venkat
 112
 97
 101
+starts with:false
+starts with:true
+pavjA
+ends with:false
+ends with:true
+pavYApavYApavYApavYApavYApavYApavYApavYApavYApavYA
+kal
+cat
+5
+false
