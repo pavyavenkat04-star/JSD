@@ -1,0 +1,304 @@
+Math Functions:
+===============
+PI():
+	-returns the PI value.
+sin():
+	-returns sine of an angle.
+cos():
+	-returns cosine of an angle.
+tan():
+	-returns tangent of an angle.
+ceil():
+	-rounds the number up to the nearest integer greater than or equal to the original number.
+floor():
+	-rounds the number up to the nearest integer smaller than or equal to the original number.
+round():
+	-rounds the number to the nearest whole number.
+sqrt():
+	-returns the square root of a number.
+abs():
+	-converts the negative number to a positive number and the positive number is left unchanged.
+max():
+	-returns the greatest number out of the given numbers.
+min():
+	-returns the smallest number out of the given numbers.
+exp():
+	-returns exponential value of a number.
+floorDivExact():
+	-calculates the floor division of two integers.
+
+
+Program:
+public class MathFun {
+    public static void main(String[] args) {
+        System.out.println(Math.PI);
+        System.out.println(Math.sin(0));
+        System.out.println((Math.cos(0)));
+        System.out.println((Math.tan(0)));
+        System.out.println((Math.ceil(12.10)));
+        System.out.println((Math.ceil(-12.10)));
+        System.out.println(Math.floor(12.90));
+        System.out.println(Math.floor(-12.90));
+        System.out.println(Math.round(12.52));
+        System.out.println(Math.round(12.49));
+        System.out.println(Math.sqrt(49));
+        System.out.println(Math.abs(-100));
+        System.out.println(Math.max(11,33));
+        System.out.println(Math.min(11,33));
+        System.out.println(Math.exp(0));
+        System.out.println(Math.floorDivExact(13,5));
+    }
+}
+Output:
+3.141592653589793
+0.0
+1.0
+0.0
+13.0
+-12.0
+12.0
+-13.0
+13
+12
+7.0
+100
+33
+11
+1.0
+2
+
+
+Control Statements:
+==================
+def: condition based execution
+
+Condition:
+	a>34
+	mark>=50
+	m1>34 && m2>34 && m3>34
+	!(m4>=35)
+	name.equals("admin") && pwd.equals("password@123")
+
+
+
+1.Simple-if:
+Syntax:
+if(condition)
+{
+statement;
+}
+
+
+Eg:
+if (mark>34)
+{
+System.out.println("Pass");
+}
+
+2.If-else:
+Syntax:
+If (condition)
+{
+true statement;
+}
+else
+{
+false statement;
+}
+
+
+Eg:
+if (marks>34)
+{
+System.out.println("Pass");
+}
+else
+{
+System.out.println("Fail");
+}
+
+Program:
+import java.util.Scanner;
+public class Control {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Enter your mark:");
+        short mark=scan.nextShort();
+        if (mark>49)
+        {System.out.println("Result:Pass");
+
+        }
+        else{
+            System.out.println("Result:Fail");
+        }
+scan.close();
+    }
+}
+Output:
+1)Enter your mark:
+79
+Result:Pass
+
+2)Enter your mark:
+38
+Result:Fail
+
+
+
+
+1.Write a program to find given no  is even or odd.
+import java.util.Scanner;
+public class OddEven {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Enter a no:");
+        short num=scan.nextShort();
+        if (num%2==0)
+        {System.out.println("Given number is even.");
+
+        }
+        else{
+            System.out.println("Given number is odd.");
+        }
+scan.close();
+    }
+}
+Output:
+1.Enter a no:
+15
+Given number is odd.
+
+2.Enter a no:
+4
+Given number is even.
+
+
+2.Write a program to find greatest among two numbers.
+import java.util.Scanner;
+public class Greatest {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Enter number 1:");
+        short a=scan.nextShort();
+        System.out.println("Enter number 2:");
+        short b=scan.nextShort();
+        if(a>b)
+        {System.out.println(a+" is the greatest number.");
+
+        }else
+        {System.out.println(b+" is the greatest number.");
+       
+        }
+    }  
+}
+Output:
+Enter number 1:
+8
+Enter number 2:
+10
+10 is the greatest number.
+
+
+3.Write a program to find eligible to vote or not.
+import java.util.Scanner;
+
+public class VoteEligibility {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Enter age:");
+        int age=scan.nextInt();
+        if (age>=18)
+        {System.out.println("Eligible to vote.");
+
+        }else
+        {System.out.println("Not eligible to vote.");
+            
+        }
+    }
+    
+}
+Output:
+1.Enter age:
+64
+Eligible to vote.
+
+2.Enter age:
+10
+Not eligible to vote.
+
+
+4.Write a program to find leap year or not.
+import java.util.Scanner;
+
+public class Leapyr {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Enter year");
+        int year=scan.nextInt();
+        if(year%4==0)
+        {System.out.println("Leap year");
+
+        }else
+        {System.out.println("Not a Leap year");
+            
+        }
+    }
+    
+}
+Output:
+1.Enter year
+2026
+Not a Leap year
+2.Enter year
+2016
+Leap year
+
+
+5.Write a program to find eligible to marriage or not.
+import java.util.Scanner;
+
+public class MrgEligibility {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+    System.out.println("Enter gender(male/female):");
+    String gender=scan.nextLine();
+    System.out.println("Enter age:");
+    int age=scan.nextInt();
+    scan.close();
+    if (gender.equals("male"))
+    {if(age>=21)
+    {System.out.println("Eligible");
+    }else
+        {System.out.println("Not eligible");
+        }
+    }
+    if (gender.equals("female"))
+    {if (age>=18)
+    {System.out.println("Eligible");
+    }else
+        {System.out.println("Not eligible");}
+    }}}
+Output:
+1.Enter gender(male/female):
+female
+Enter age:
+80
+Eligible
+
+2.Enter gender(male/female):
+female
+Enter age:
+17
+Not eligible
+
+3.Enter gender(male/female):
+male
+Enter age:
+20
+Not eligible
+
+4.Enter gender(male/female):
+male
+Enter age:
+32
+Eligible
