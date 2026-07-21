@@ -154,8 +154,8 @@ statement;
 }
 
 
-Program:
-import java.util.Scanner;
+Programs:
+1.import java.util.Scanner;
 public class Control {
     public static void main(String[] args) {
         Scanner scan=new Scanner(System.in);
@@ -180,7 +180,7 @@ Result:Pass
 38
 Result:Fail
 
-import java.util.Scanner;
+2.import java.util.Scanner;
 
 public class Grade {
     public static void main(String[] args) {
