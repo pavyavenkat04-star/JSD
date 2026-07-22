@@ -1,0 +1,25 @@
+import java.util.Scanner;
+class Student
+{public static void main(String[]args)
+{Scanner scan=new Scanner(System.in);
+System.out.println("Enter sub1 marks:");
+short sub1=scan.nextShort();
+System.out.println("Enter sub2 marks:");
+short sub2=scan.nextShort();
+System.out.println("Enter sub3 marks:");
+short sub3=scan.nextShort();
+System.out.println("Enter sub4 marks:");
+short sub4=scan.nextShort();
+System.out.println("Enter sub5 marks:");
+short sub5=scan.nextShort();
+scan.close();
+int total=sub1+sub2+sub3+sub4+sub5;
+System.out.println("Total marks:"+total);
+float avg=total/5.0f;
+System.out.println("Average:"+avg);
+}
+}
+
+
+
+
