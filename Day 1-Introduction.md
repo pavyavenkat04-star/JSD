@@ -1,0 +1,18 @@
+- Java is both a compiler and interpreter.
+- Java was introduced by James Gosling in 1991.
+- Original name of Java was "Oak"
+- Renamed as "Java" in 1995.
+- Oracle owns Java with the cost of 2.5 Billion.
+- Oracle maintains Java from jdk 1.8
+- Java is a case sensitive language.
+- Platform independent language.
+- It is a open source software.
+- OOPS is partially supported.
+- Java is a strongly type checked language i.e mention the datatype before declaration.
+- To check whether java is installed- command prompt>java --version.
+- Java supports all OS.
+- To compile:javac filename/classname .java
+- To run:java filename/classname
+- Every java program contains atleast one class.
+- Java default datatype - string.
+- Java concatenation operator - +

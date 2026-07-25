@@ -1,0 +1,246 @@
+## Arithmetic Operators:
+
+Addition 		+
+Subtraction		-
+Multiplication	    *
+Division		/
+Modulus			%
+
+**Program 1:**
+```java
+class Operators
+{
+public static void main(String [] args)
+{
+int a=0;
+int b=0;
+int c=a/b;
+System.out.println(c);
+}
+}
+```
+**Output:**
+```bash
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+        at Operators.main(Operators.java:7)
+```
+
+Program 2:
+class Operators
+{
+public static void main(String [] args)
+{
+int a=5;
+int b=0;
+int c=a/b;
+System.out.println(c);
+}
+}
+Output:
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+        at Operators.main(Operators.java:7)
+
+
+Program 3:
+class Operators
+{
+public static void main(String [] args)
+{
+int a=0;
+int b=5;
+int c=a/b;
+System.out.println(c);
+}
+}
+Output:
+0
+
+
+Program 4:
+class Operators
+{
+public static void main(String [] args)
+{
+int a=11;
+int b=3;
+int c=a%b;
+System.out.println(c);
+System.out.println(6%3);
+System.out.println(2%3);
+System.out.println(2/3);
+}
+}
+Output:
+2
+0
+2
+0
+
+
+Program 5:
+class Operators
+{
+public static void main(String [] args)
+{
+int a=11;
+int b=3;
+int c=a+b*2;
+System.out.println(c);
+c=(a+b)*2;
+System.out.println(c);
+c=200-1+200;
+System.out.println(c);
+}
+}
+Output:
+17
+28
+399
+
+
+Relational Operators:
+=====================
+Also known as comparison operators.
+
+less than			<
+less than or equal to		<=
+greater than			>
+greater than or equal to	>=
+is equal			==
+is not equal			!=
+
+Program:
+class Operators
+{
+public static void main(String [] args)
+{
+int a=11;
+int b=11;
+System.out.println(a<b);
+boolean c=a>b;
+System.out.println(c);
+c=a>=b;
+System.out.println(c);
+c=a<=b;
+System.out.println(c);
+c=a==b;
+System.out.println(c);
+c=a!=b;
+System.out.println(c);
+}
+}
+Output:
+false
+false
+true
+true
+true
+false
+
+
+Logical Operators:
+==================
+&&	logical AND
+||	logical OR
+!	NOT
+
+Program:
+class Operators
+{
+public static void main(String [] args)
+{
+int m1=100;
+int m2=100;
+int m3=100;
+int m4=100;
+int m5=34;
+boolean res=m1>34&&m2>34&&m3>34&&m4>34&&m5>34;
+System.out.println(res);
+boolean res1=m1>34||m2>34||m3>34||m4>34||m5>34;
+System.out.println(res1);
+boolean res2=!(m1>34&&m2>34&&m3>34&&m4>34&&m5>34);
+System.out.println(res2);
+}
+}
+Output:
+false
+true
+true
+
+
+Assignment Operator:
+=====================
+Used to assign or store a value in a variable.
+Eg:
+a+=10 (or) a=a+10
+a-=5 (or) a=a-5
+a*=2 (or) a=a*2
+a/=5 (or) a=a/5
+a%=3 (or) a=a%3
+
+Increment Operator:
+===================
+Used to increase the value of the variable by 1.
+i)Pre Increment
+Increases the value of the variable by 1 and stores the same value.
+        eg:++count
+ii)Post Increment
+Stores the current value in the variable but for further actions increases the value of the variable by 1.
+        eg:count++
+
+Eg:
+int a=100;
+System.out.println(a++);//prints 100
+System.out.println(a);//prints 101
+System.out.println(++a);//prints 102
+System.out.println(a++);//prints 102
+System.out.println(++a);//prints 104
+System.out.println(a);//prints 104
+
+
+Decrement Operator:
+===================
+Used to decrease the value of the variable by 1.
+i)Pre Decrement:
+Eg:--count
+ii)Post Decrement:
+Eg:count--
+Eg: int s=113;
+System.out.println(s--);//prints 113
+System.out.println(s);//prints 112
+System.out.println(--s);//prints 111
+System.out.println(s--);//prints 111
+System.out.println(s);//prints 110
+
+
+Conditional/Ternary Operators:
+==============================
+short form of if-else statement
+Uses three operands.
+        i)condition
+        ii)expression when condition is true
+        iii)expression when condition is false
+Syntax:
+variable=condition?True_part:False_part;
+Eg:
+int a=10,b=3;
+c=(a>b)?a:b;//c=(10>3)?10:3
+System.out.println(c);//prints 10
+
+Bitwise Operators:
+==================
+Bitwise AND(&)
+Bitwise OR(|)
+Bitwise NOT(~)
+Bitwise XOR(^)
+        
+Truth Table:
+a        b        AND      OR       XOR
+1        1        1        1        0     
+0        1        0        1        1
+1        0        0        1        1
+0        0        0        0        0
+
+a        NOT
+1        0
+0        1
