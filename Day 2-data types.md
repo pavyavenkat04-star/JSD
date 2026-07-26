@@ -1,10 +1,10 @@
 # Java Data Types:
 
 ## Numbers:
-	byte		1byte=8bits		2^8=256/2		-128 to 127
+	byte		1byte=8bits			2^8=256/2			-128 to 127
 	short		2byte=16bits		2^16=65536/2		-32768 to 3276
-	int		4bytes=32 bits		2^32=4294967296/2 	-2147483648 to 2147483647
-	long		8bytes=64bits   	2^64=			-9223372036854775808 to 92233772036854775807    
+	int			4bytes=32 bits		2^32=4294967296/2 	-2147483648 to 2147483647
+	long		8bytes=64bits   	2^64=				-9223372036854775808 to 92233772036854775807    
 
 ## Decimal:
 	float	4bytes	8digits

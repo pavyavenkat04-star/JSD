@@ -1,6 +1,6 @@
-TASK:
-TN EB bill calculator.
-======================
+**TASK:**
+## TN EB bill calculator.
+```java
 import java.util.Scanner;
 public class EbBill {
     public static void main(String[] args) {
@@ -29,13 +29,17 @@ public class EbBill {
         System.out.println("EB Bill amount:"+amnt);
     }
 }
-Output:
+```
+**Output:**
+```bash
 1.Enter no of units:
 415
 No of units used:415
 EB Bill amount:1034.5
-
+```
+```bash
 2.Enter no of units:
 530
 No of units used:530
 EB Bill amount:2292.0
+```

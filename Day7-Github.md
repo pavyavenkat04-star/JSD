@@ -1,28 +1,27 @@
-GitHub:
-=======
-How to clone the files in the repository to the local folder and how to push the local files to the repository?
+## GitHub:
+### How to clone the files in the repository to the local folder and how to push the local files to the repository?
 
-Step1:
+#### Step1:
 	Check GitHub is installed or not.If not installed, install it.
 	Create a repository.Don't forget to tick ReadMe and License.
-Step 2:
+#### Step 2:
 	Copy the git repository link.
-Step 3:
+#### Step 3:
 	Create new folder (d:/nmvn).
-Step 4:
+#### Step 4:
 	Open command prompt.
 	d:/nmvn>git clone (paste repo link).
 	This moves the content from the repository to the local folder.
-Step 5:
+#### Step 5:
 	cd gitrepository name
-Step 6:
+#### Step 6:
 	"Code ." ---->opens visual studio code.
-Step 7:
+#### Step 7:
 	Add files in visual studio code.
-Step 8:
+#### Step 8:
 	"git add ."---->Requests to add files in GitHub.
-Step 9:
+#### Step 9:
 	git commit -m "any message"
 	First time action requires authentication of the account.
-Step 10:
+#### Step 10:
 	"git push "---->Pushes the file to the repository.

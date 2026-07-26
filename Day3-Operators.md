@@ -1,4 +1,4 @@
-## Arithmetic Operators:
+# Arithmetic Operators:
 
 Addition 		+
 Subtraction		-
@@ -25,7 +25,8 @@ Exception in thread "main" java.lang.ArithmeticException: / by zero
         at Operators.main(Operators.java:7)
 ```
 
-Program 2:
+**Program 2:**
+```java
 class Operators
 {
 public static void main(String [] args)
@@ -36,12 +37,15 @@ int c=a/b;
 System.out.println(c);
 }
 }
-Output:
+```
+**Output:**
+```bash
 Exception in thread "main" java.lang.ArithmeticException: / by zero
         at Operators.main(Operators.java:7)
+```
 
-
-Program 3:
+**Program 3:**
+```java
 class Operators
 {
 public static void main(String [] args)
@@ -52,11 +56,14 @@ int c=a/b;
 System.out.println(c);
 }
 }
-Output:
+```
+**Output:**
+```bash
 0
+```
 
-
-Program 4:
+**Program 4:**
+```java
 class Operators
 {
 public static void main(String [] args)
@@ -70,14 +77,17 @@ System.out.println(2%3);
 System.out.println(2/3);
 }
 }
-Output:
+```
+**Output:**
+```bash
 2
 0
 2
 0
+```
 
-
-Program 5:
+**Program 5:**
+```java
 class Operators
 {
 public static void main(String [] args)
@@ -92,24 +102,26 @@ c=200-1+200;
 System.out.println(c);
 }
 }
-Output:
+```
+**Output:**
+```bash
 17
 28
 399
+```
 
+# Relational Operators:
+- Also known as comparison operators.
 
-Relational Operators:
-=====================
-Also known as comparison operators.
+- less than			<
+- less than or equal to		<=
+- greater than			>
+- greater than or equal to	>=
+- is equal			==
+- is not equal			!=
 
-less than			<
-less than or equal to		<=
-greater than			>
-greater than or equal to	>=
-is equal			==
-is not equal			!=
-
-Program:
+**Program:**
+```java
 class Operators
 {
 public static void main(String [] args)
@@ -129,22 +141,25 @@ c=a!=b;
 System.out.println(c);
 }
 }
-Output:
+```
+**Output:**
+```bash
 false
 false
 true
 true
 true
 false
+```
 
 
-Logical Operators:
-==================
+# Logical Operators:
 &&	logical AND
 ||	logical OR
 !	NOT
 
-Program:
+**Program:**
+```java
 class Operators
 {
 public static void main(String [] args)
@@ -162,24 +177,24 @@ boolean res2=!(m1>34&&m2>34&&m3>34&&m4>34&&m5>34);
 System.out.println(res2);
 }
 }
-Output:
+```
+**Output:**
+```bash
 false
 true
 true
+```
 
-
-Assignment Operator:
-=====================
-Used to assign or store a value in a variable.
-Eg:
+# Assignment Operator:
+- Used to assign or store a value in a variable.
+- Eg:
 a+=10 (or) a=a+10
 a-=5 (or) a=a-5
 a*=2 (or) a=a*2
 a/=5 (or) a=a/5
 a%=3 (or) a=a%3
 
-Increment Operator:
-===================
+# Increment Operator:
 Used to increase the value of the variable by 1.
 i)Pre Increment
 Increases the value of the variable by 1 and stores the same value.
@@ -189,6 +204,7 @@ Stores the current value in the variable but for further actions increases the v
         eg:count++
 
 Eg:
+```java
 int a=100;
 System.out.println(a++);//prints 100
 System.out.println(a);//prints 101
@@ -196,45 +212,49 @@ System.out.println(++a);//prints 102
 System.out.println(a++);//prints 102
 System.out.println(++a);//prints 104
 System.out.println(a);//prints 104
+```
 
-
-Decrement Operator:
-===================
+# Decrement Operator:
 Used to decrease the value of the variable by 1.
 i)Pre Decrement:
 Eg:--count
 ii)Post Decrement:
-Eg:count--
-Eg: int s=113;
+Eg:
+```java 
+count--
+```
+Eg: 
+```java
+int s=113;
 System.out.println(s--);//prints 113
 System.out.println(s);//prints 112
 System.out.println(--s);//prints 111
 System.out.println(s--);//prints 111
 System.out.println(s);//prints 110
+```
 
-
-Conditional/Ternary Operators:
-==============================
-short form of if-else statement
-Uses three operands.
+# Conditional/Ternary Operators:
+- short form of if-else statement
+- Uses three operands.
         i)condition
         ii)expression when condition is true
         iii)expression when condition is false
-Syntax:
+**Syntax:**
 variable=condition?True_part:False_part;
 Eg:
+```java
 int a=10,b=3;
 c=(a>b)?a:b;//c=(10>3)?10:3
 System.out.println(c);//prints 10
+```
 
-Bitwise Operators:
-==================
-Bitwise AND(&)
-Bitwise OR(|)
-Bitwise NOT(~)
-Bitwise XOR(^)
+# Bitwise Operators:
+- Bitwise AND(&)
+- Bitwise OR(|)
+- Bitwise NOT(~)
+- Bitwise XOR(^)
         
-Truth Table:
+**Truth Table:**
 a        b        AND      OR       XOR
 1        1        1        1        0     
 0        1        0        1        1

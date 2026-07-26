@@ -1,4 +1,4 @@
-**Escape sequence :**
+# Escape sequence :
 - Also known as Format specifier
 **Purpose:**
 - Proper alignment

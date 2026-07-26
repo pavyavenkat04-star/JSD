@@ -1,11 +1,11 @@
-switch statement:
-=================
-Defn:
+# Switch statement:
+**Defn:**
     Expression based execution
-expression:
+**Expression:**
     var,var+1,a+b/c,a*can
 
-Syntax:
+**Syntax:**
+```java
 switch(expression)
 {case value1:
         statement1;
@@ -20,8 +20,10 @@ case value3:
 default:
         default statement;
     }
+    ```
 
 Eg:
+```java
 int k=1;
 switch(k)
 {case 1:
@@ -38,3 +40,4 @@ case 4:
 default:
     System.out.println("Invalid");
 }
+```
