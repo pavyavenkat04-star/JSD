@@ -8,7 +8,7 @@
 	- Create object to Scanner class
 	- Eg:Scanner scan=new Scanner(System.in);
 
--**Step 3:**
+- **Step 3:**
     String data=scan.next();
 	String data=scan.nextLine();
 
@@ -26,7 +26,7 @@
 nextLine() method reads the name along with the spaces in between.
 next() method reads only the firstname and doesn't read the spaces and name after that.
 
-** Step 4:**	
+- **Step 4:**	
 	scan.close()
 
 **Programs:**

@@ -254,13 +254,3 @@ System.out.println(c);//prints 10
 - Bitwise NOT(~)
 - Bitwise XOR(^)
         
-**Truth Table:**
-a        b        AND      OR       XOR
-1        1        1        1        0     
-0        1        0        1        1
-1        0        0        1        1
-0        0        0        0        0
-
-a        NOT
-1        0
-0        1

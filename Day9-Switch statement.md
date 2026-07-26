@@ -20,9 +20,9 @@ case value3:
 default:
         default statement;
     }
-    ```
+```
 
-Eg:
+**Eg:**
 ```java
 int k=1;
 switch(k)
