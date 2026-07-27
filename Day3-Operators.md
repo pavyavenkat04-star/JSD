@@ -1,9 +1,9 @@
 # Arithmetic Operators:
 
-- Addition 		+
-- Subtraction		-
-- Multiplication	*
-- Division		/
+- Addition 		(+)
+- Subtraction		(-)
+- Multiplication	(*)
+- Division		(/)
 - Modulus			%
 
 **Program 1:**
