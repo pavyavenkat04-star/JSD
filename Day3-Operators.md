@@ -154,9 +154,9 @@ false
 
 
 # Logical Operators:
-&&	logical AND
-||	logical OR
-!	NOT
+- &&	logical AND
+- ||	logical OR
+- !	NOT
 
 **Program:**
 ```java
