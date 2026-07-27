@@ -195,12 +195,11 @@ a/=5 (or) a=a/5
 a%=3 (or) a=a%3
 
 # Increment Operator:
-Used to increase the value of the variable by 1.
-i)Pre Increment
-Increases the value of the variable by 1 and stores the same value.
-        eg:++count
-ii)Post Increment
-Stores the current value in the variable but for further actions increases the value of the variable by 1.
+- Used to increase the value of the variable by 1.
+- i)Pre Increment
+- Increases the value of the variable by 1 and stores the same value.eg:++count
+- ii)Post Increment
+- Stores the current value in the variable but for further actions increases the value of the variable by 1.
         eg:count++
 
 Eg:
@@ -215,14 +214,14 @@ System.out.println(a);//prints 104
 ```
 
 # Decrement Operator:
-Used to decrease the value of the variable by 1.
-i)Pre Decrement:
-Eg:--count
-ii)Post Decrement:
-Eg:
-```java 
-count--
-```
+- Used to decrease the value of the variable by 1.
+- i)Pre Decrement:
+- Eg:--count
+- ii)Post Decrement:
+- Eg:
+
+- count--
+
 Eg: 
 ```java
 int s=113;
@@ -240,7 +239,7 @@ System.out.println(s);//prints 110
         ii)expression when condition is true
         iii)expression when condition is false
 **Syntax:**
-variable=condition?True_part:False_part;
+- variable=condition?True_part:False_part;
 Eg:
 ```java
 int a=10,b=3;
