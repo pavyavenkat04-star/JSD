@@ -188,18 +188,18 @@ true
 # Assignment Operator:
 - Used to assign or store a value in a variable.
 - Eg:
-a+=10 (or) a=a+10
-a-=5 (or) a=a-5
-a*=2 (or) a=a*2
-a/=5 (or) a=a/5
-a%=3 (or) a=a%3
+- a+=10 (or) a=a+10
+- a-=5 (or) a=a-5
+- a*=2 (or) a=a*2
+- a/=5 (or) a=a/5
+- a%=3 (or) a=a%3
 
 # Increment Operator:
 - Used to increase the value of the variable by 1.
 - i)Pre Increment
-- Increases the value of the variable by 1 and stores the same value.eg:++count
+   - Increases the value of the variable by 1 and stores the same value.eg:++count
 - ii)Post Increment
-- Stores the current value in the variable but for further actions increases the value of the variable by 1.
+    - Stores the current value in the variable but for further actions increases the value of the variable by 1.
         eg:count++
 
 Eg:
@@ -216,11 +216,9 @@ System.out.println(a);//prints 104
 # Decrement Operator:
 - Used to decrease the value of the variable by 1.
 - i)Pre Decrement:
-- Eg:--count
+    - Eg:--count
 - ii)Post Decrement:
-- Eg:
-
-- count--
+    - Eg:count--
 
 Eg: 
 ```java
@@ -235,9 +233,9 @@ System.out.println(s);//prints 110
 # Conditional/Ternary Operators:
 - short form of if-else statement
 - Uses three operands.
-        i)condition
-        ii)expression when condition is true
-        iii)expression when condition is false
+   - condition
+   - expression when condition is true
+   - expression when condition is false
 **Syntax:**
 - variable=condition?True_part:False_part;
 Eg:
