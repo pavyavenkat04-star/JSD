@@ -1,10 +1,10 @@
 # Arithmetic Operators:
 
-Addition 		+
-Subtraction		-
-Multiplication	    *
-Division		/
-Modulus			%
+- Addition 		+
+- Subtraction		-
+- Multiplication	*
+- Division		/
+- Modulus			%
 
 **Program 1:**
 ```java
