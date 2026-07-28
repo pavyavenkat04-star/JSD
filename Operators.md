@@ -4,7 +4,7 @@
 - Subtraction		(-)
 - Multiplication	(*)
 - Division		(/)
-- Modulus			%
+- Modulus			(%)
 
 **Program 1:**
 ```java
