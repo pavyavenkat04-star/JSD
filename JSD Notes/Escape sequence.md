@@ -5,11 +5,11 @@
 
 
 - \n -----> cursor moves to new line
--  \t ----->tab space
+- \t ----->tab space
 - \b ----->backspace
 - \r ----->overwritten
-- \" ----->double quotes
-- \' ----->single quotes
+-` \" `----->double quotes
+- `\'` ----->single quotes
 - \\ ----->single slash
 
 **Program:**
