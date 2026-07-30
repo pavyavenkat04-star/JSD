@@ -87,26 +87,28 @@
 
 ## for loop:
 ### Syntax:
+```java
 for (initial;condition;increment/decrement)
 {
     statement;
 }
+```
 ### Execution steps:
 - **Step 1:**
-- Initialising (starting a value)
-- Eg: int i=1
+    - Initialising (starting a value)
+    - Eg: int i=1
 - **Step 2:**
-- Condition (True/False)
-- Eg:i<10
-- If true means goto step 3
-- If false means end loop
+    - Condition (True/False)
+    - Eg:i<10
+    - If true means goto step 3
+    - If false means end loop
 - **Step 3:**
-- Eg:System.out.println(i)
+    - Eg:System.out.println(i)
 - **Step 4:**
-- Increment/Decrement
-- Eg:i++ or i=i+1 or i=i+1
+    - Increment/Decrement
+    - Eg:i++ or i=i+1 or i=i+1
 - **Step 5:**
-- Step 2
+    - Step 2
 ### Example
 ```java
 for(int i=5;i<17;i+=3)

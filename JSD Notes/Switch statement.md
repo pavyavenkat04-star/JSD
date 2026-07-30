@@ -3,7 +3,7 @@
     Expression based execution
     
 **Expression:**
-    var,var+1,a+b/c,a*can
+    var, var+1, a+b/c, a*can
 
 **Syntax:**
 ```java

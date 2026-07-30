@@ -11,5 +11,5 @@
 # Git
 - version control to track changes in the code and to give access to multiple people.
 - data storage local to cloud
-** Github**
+**Github**
 - website

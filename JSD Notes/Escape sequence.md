@@ -8,7 +8,7 @@
 - \t ----->tab space
 - \b ----->backspace
 - \r ----->overwritten
--` \" `----->double quotes
+- ` \" `----->double quotes
 - `\'` ----->single quotes
 - \\ ----->single slash
 
