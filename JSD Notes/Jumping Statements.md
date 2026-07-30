@@ -17,30 +17,34 @@
 - break-works in both loop and switch statement.
 
 Eg:
+```java
 for (int i=5;i<=40;i++)
 {
     if (i<=30)
      continue;  
   System.out.println(" "+i);  //prints 31---->40
 }
-
+```
+```java
 for(int i=5;i<=40;i++)
 {if (i>=10 && i<30)
  {  continue;
   System.out.print(" "+i);  //prints 5 to 9 30 to 40
 }
 }
-
+```
+```java
 for (int i=5;i<=40;i++)
 {if(i<=10 || i>=30)
 continue;
 System.out.println(" "+i);   //prints 11 to 29
 }
-
+```
+```java
 for (int i=5;i<=40;i++)
 {System.out.println(" "+i);
 if (i<=30)
  break;
  }System.out.println("end");  \\prints 5 end
-                                 
+```                              
  
