@@ -17,10 +17,15 @@ public class EvenOddNum {
          if(rem%2==0)
             {even_count=even_count+1;
             even_sum=even_sum+rem; 
-            edis=edis*10+rem;
+            edis=edis*10+rem;       /*to print in the same order of the given num
+                                     long e=1;
+                                     edis=edis+rem*e;
+                                     e=e*10;*/
             }
         else
-        {odd_count++;
+        {odd_count++;                      /*long od=1;
+                                     odis=odis+rem*od;
+                                     od=od*10;*/
         odd_sum=odd_sum+rem;
         odis=odis*10+rem;  
         }
