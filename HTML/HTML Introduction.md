@@ -32,5 +32,5 @@
 2. Body section
     - use html tags
     - `<body>`
-    - header,font,text,paragraph,images,list,tables,link,form,frameset,animation,audio,video
+        - header,font,text,paragraph,images,list,tables,link,form,frameset,animation,audio,video
     - `</body>`
