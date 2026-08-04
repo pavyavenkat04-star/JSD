@@ -31,7 +31,6 @@
     - bootstrap cdn
 2. Body section
     - use html tags
-    - <body>
-    - ---
+    - `<body>`
     - header,font,text,paragraph,images,list,tables,link,form,frameset,animation,audio,video
-    </body>
+    - `</body>`
