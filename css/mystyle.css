@@ -1,0 +1,19 @@
+h1
+{
+ background-color: orange;
+ border:5px solid red;
+
+}
+h2
+{
+    background-color: white;
+    border:5px solid blue;
+}
+h3
+{
+    background-color: green;
+    border:5px solid darkgreen;
+}
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
