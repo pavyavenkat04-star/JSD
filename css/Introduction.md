@@ -14,3 +14,7 @@
     - Affects all matching elements across that entire single page
 3. External css 
     - Stores all of the  design instructions in a completely separate file with a .css extension, linking it to the HTML document via a ```<link>``` tag
+
+- Consider an element is given rules to be styled in inline,internal and external css.Here in this case, first the styles mentioned in inline css is applied.After this,the style which is mentioned most recently is applied.
+
+- In case of id and a class,id is given first preference.

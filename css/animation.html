@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+    div,img
+    {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background-color: pink;
+        border:10px dotted red;
+        position:relative;
+        animation-name:kalvi;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-duration: 3s;
+        animation-delay: 0s;
+        animation-direction:alternate;
+    }
+    @keyframes kalvi
+    {
+        from{
+            left:0px;
+            top:0px;
+        }
+        to{
+            left:1500px;
+            bottom:0px;
+            
+            transform:rotateY(360deg);
+            /* for coin rotation:
+            transform:rotateX(360deg);
+            In y-axis:rotateY(360deg);
+            */
+        }
+    }
+</style>
+</head>
+<body>
+    <div>
+
+    </div>
+    <img src="./images/butterfly.png"
+</body>
+</html>
