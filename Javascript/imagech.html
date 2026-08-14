@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function imgch()
+        {
+            document.getElementById("myimg").src="./images/"+event.target.value+".jpg";
+        }
+    </script>
+</head>
+<body>
+    <h1><center>Display photo/image:</center></h1>
+    <input type="radio" onchange="imgch()" name="ch" value="girl">Girl<br>
+    <input type="radio" onchange="imgch()" name="ch" value="strawberry">Fruit<br>
+    <input type="radio" onchange="imgch()" name="ch" value="scenery">Nature<br>
+    <input type="radio" onchange="imgch()" name="ch" value="deer">Deer<br>
+    <center>
+        <img src="" id="myimg" width="60%">
+    </center>
+</body>
+</html>

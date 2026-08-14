@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript"> 
+    function colours()
+    {
+        document.bgColor=event.target.value;
+    }
+    </script>
+</head>
+<body>
+    <h1><center>Change Background colour</center></h1>
+    <label>Select color:</label><br>
+    <pre>
+    <input type="radio" onchange="colours()" name="col" value="red">Red
+    <input type="radio" onchange="colours()" name="col" value="green">Green
+    <input type="radio" onchange="colours()" name="col" value="blue">Blue
+    <input type="radio" onchange="colours()" name="col" value="yellow">yellow
+</pre>
+</body>
+</html>

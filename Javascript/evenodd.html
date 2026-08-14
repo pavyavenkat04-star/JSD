@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function evenodd()
+        {
+           var num=parseInt(document.getElementById("t1").value);
+           if(num%2==0)
+           document.getElementById("s").innerHTML="The num is even."
+           else
+            document.getElementById("s").innerHTML="The num is odd."
+        }
+    </script>
+</head>
+<body>
+    <label>Enter a no</label><br>
+    <input type="text" id="t1"><br>
+    <input type="button" onclick="evenodd()" value="Check">
+    <div id="s"></div>
+</body>
+</html>

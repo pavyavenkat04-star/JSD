@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function num()
+        {
+            var n=parseInt(document.getElementById("n1").value);
+            if(n>0)
+            document.getElementById("res").innerHTML="The number is positive";
+            else if(n==0)
+            document.getElementById("res").innerHTML="The number is zero";
+            else
+            document.getElementById("res").innerHTML="The number is negative";
+        }
+    </script>
+</head>
+<body>
+    <label>Enter a number:</label><br>
+    <input type="text" id="n1"><br>
+    <input type="button" onclick="num()" value="Submit">
+    <div id="res"></div>
+
+</body>
+</html>
