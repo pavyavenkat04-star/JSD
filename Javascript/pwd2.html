@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function pwd()
+        {
+        var a=document.getElementById("p");
+        if(p.type==="password")
+        { p.type="text";
+        document.getElementById("im").src="./images/eyeo.png";
+        }
+        else
+        {
+            p.type="password";
+            document.getElementById("im").src="./images/eyec.jpg";
+        }}
+    </script>
+    <style>
+        #b, #im
+        {
+            position:relative;
+            background-color: transparent;
+            cursor:pointer;
+            left:-15px;
+            border:none;
+            outline:none;
+        }
+    </style>
+</head>
+<body>
+  <input type="Password" id="p" placeholder="Enter Password">
+  <button id="b" onclick="pwd()">
+ <img src="./images/eyec.jpg" width="12px" id="im">
+  </button> 
+</body>
+</html>

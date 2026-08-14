@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function showhide()
+        {
+        var t=document.getElementById("pw");
+        if (t.type==="password")
+        t.type="text";
+        else
+        t.type="password";
+        }
+    </script>
+    <style type="text/css">
+        #b1
+        {
+            position:relative;
+            left:-110px;
+            border:none;
+            outline:none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <input type="Password" id="pw" placeholder="Enter Password">
+    <button onclick="showhide()">ShowHide</button>
+    <button id="b1" onclick="showhide()">
+        <img src="./images/eyeo.png" width="12px">
+    </button>
+    
+</body>
+</html>
