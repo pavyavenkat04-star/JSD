@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function show()
+        {
+            var name=document.getElementById("t").value;
+            switch(name)
+            {
+                case "deer":
+                    document.getElementById("myimg").src="./images/deer.jpg";
+                    break;
+                case "girl":
+                    document.getElementById("myimg").src="./images/girl.jpg";
+                    break;
+                case "scenery":
+                    document.getElementById("myimg").src="./images/scenery.jpg";
+                    break;
+                default:
+                    document.getElementById("myimg").src="./images/eyec.jpg";
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <input id="t" type="text" placeholder="Enter a name:" onblur="show()">
+    <img src="" id="myimg" width="80%" align="center">    
+</body>
+</html>

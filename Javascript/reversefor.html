@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function sumofnos()
+        {
+            var a=parseInt(document.getElementById("t2").value);
+            var b=parseInt(document.getElementById("t1").value);
+            var res="";
+            var sum=0;
+            for(var i=b;i>=a;i--)
+        {
+            sum=sum+i;
+            if(i==a)
+            res=res+i+"";
+            else
+            res=res+i+"+";
+        } document.getElementById("n").innerHTML=res+"="+sum;
+        }
+    </script>
+</head>
+<body>
+    <h1><center>Sum of Series</center></h1>
+    <input id="t1" type="text" placeholder="Enter start number"><br>
+    <input id="t2" type="text" placeholder="Enter end number"><br>
+    <input type="button" value="click here" onclick="sumofnos()">
+    <div id="n"></div>
+</body>
+</html>
