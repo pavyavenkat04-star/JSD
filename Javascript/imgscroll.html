@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var i=1;
+        function showimage()
+        {  if(i==1)
+            document.getElementById("img").src="./images/deer.jpg";
+            if(i==2)
+            document.getElementById("img").src="./images/scenery.jpg";
+            if(i==3)
+            document.getElementById("img").src="./images/strawberry.jpg";
+            if (i==4)
+            document.getElementById("img").src="./images/girl.jpg";
+            i++;
+            if (i>=5)
+            i=1;
+            setTimeout(showimage,100);
+
+        }
+    </script>
+</head>
+<body onload="showimage()">
+    <center>
+        <img style="border:10px ridge salmon" id="img" src="./images/deer.jpg" width="90%">
+    </center>
+    
+</body>
+</html>
