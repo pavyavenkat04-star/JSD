@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function calcsum()
+        {
+            var num=parseInt(document.getElementById("tb").value);
+            var rem=0;
+            var sum=0;
+        
+        while(num>0)
+        { 
+        rem=num%10;
+        num=Math.floor(num/10);
+        sum=sum+rem;
+        }
+        document.getElementById("res").innerHTML=sum;
+        }
+    </script>
+</head> 
+<body>
+<h1><center>Sum of Digits</center></h1>
+<input id="tb" type="text" placeholder="Enter number"><br>
+<input type="button" value="sum" onclick="calcsum()">
+<div id="res"></div>
+</body>
+</html>

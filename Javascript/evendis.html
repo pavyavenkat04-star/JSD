@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check()
+        {
+            var a=parseInt(document.getElementById("inp").value);
+            var rem=0;
+            var evno="";
+            while(a>0)
+        {
+            rem=a%10;
+            a=Math.floor(a/10);
+            if(rem%2==0)
+            evno=" "+rem+evno;
+            
+
+        }document.getElementById("op").innerHTML=evno;
+        }
+    </script>
+</head>
+<body>
+    <h1><center>Display Even Numbers</center></h1>
+    <input id="inp" type="text" placeholder="Enter any number"><br>
+    <input type="button" value="even nos" onclick="check()">
+    <div id="op"></div>
+</body>
+</html>
