@@ -8,16 +8,16 @@
         function check()
         {
         var a=document.getElementById("tb").value;
-          var res=/^[a-zA-Z]{3,}$/;
-      /*for accepting atleast one char in numbers,letters
+          /*var res=/^[a-zA-Z]{3,}$/;
+      for accepting atleast one char in numbers,letters
         var res=/^[a-zA-Z0-9]+$/;
 
         accepts only special chars  
         var res=/^[^a-zA-Z0-9]*$/;
         
-        first letter in caps (2nd) space (3rd) name in small letters
+        first letter in caps (2nd) space (3rd) name in small letters */
         var res=/^[A-Z]{1}[ ]{1}[a-z]+$/;
-        */
+       
         if (a.match(res))
         alert("valid");
         else
