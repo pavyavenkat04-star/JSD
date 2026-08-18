@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function dis()
+    {
+        var a=document.getElementById("in").value;
+        var res=/^[0-9]{10}$/;
+        if (a.match(res))
+        alert("valid");
+        else
+        alert("invalid");
+    }
+    </script>
+</head>
+<body>
+<input type="text" id="in" placeholder="Enter phone num " ><br>
+<input type="button" onclick="dis()" value="validate">
+</body>
+</html>l

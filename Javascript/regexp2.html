@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check()
+        {
+        var a=document.getElementById("tb").value;
+          var res=/^[a-zA-Z]{3,}$/;
+      /*for accepting atleast one char in numbers,letters
+        var res=/^[a-zA-Z0-9]+$/;
+
+        accepts only special chars  
+        var res=/^[^a-zA-Z0-9]*$/;
+        
+        first letter in caps (2nd) space (3rd) name in small letters
+        var res=/^[A-Z]{1}[ ]{1}[a-z]+$/;
+        */
+        if (a.match(res))
+        alert("valid");
+        else
+        alert("invalid");
+    }
+    </script>
+</head>
+<body>
+    <h2>Regular Expression Name validation</h2>
+    <h4>min:3,max:infinite allowed</h4>
+    <input type="text" id="tb" placeholder="Enter a name">
+    <br>
+    <input type="button" onclick="check()" value="validate">
+</body>
+</html>
