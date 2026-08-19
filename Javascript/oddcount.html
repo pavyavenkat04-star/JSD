@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function oddcount()
+        {
+            var no=parseInt(document.getElementById("no").value);
+            var arr=new Array(no);
+            var count=0;
+            for(var i=0;i<no;i++)
+        {
+            arr[i]=parseInt(prompt("Enter array element "+i));
+            if(arr[i]%2!=0)
+            count++;
+        }document.getElementById("res").innerHTML="Number of odd no's:"+count;
+
+        }
+    </script>
+</head>
+<body>
+    <h5> count of odd numbers in an array</h5>
+    <input type="text" id="no" placeholder="Enter array size">
+    <br>
+    <input type="button" onclick="oddcount()" value="count">
+    <div id="res"></div>
+</body>
+</html>

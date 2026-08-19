@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function bigelem()
+        {
+            var size=document.getElementById("n1").value;
+            var arr=new Array(size);
+            for (var i=0;i<size;i++)
+        {
+            arr[i]=prompt("Enter element "+i);
+        }
+        var big=arr[0];
+        for (var i=0;i<size;i++)
+        {
+            if(big<arr[i])
+            big=arr[i];
+            
+        }document.getElementById("n2").innerHTML="Biggest element:"+big;
+        }
+    </script>
+</head>
+<body>
+    <h1><center>Largest element in an array</center></h1>
+    <input type="number" id="n1" placeholder="Enter array size"><br>
+    <input type="button" value="biggest element" onclick="bigelem()">
+    <div id="n2"></div>
+</body>
+</html>

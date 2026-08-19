@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function dispsum()
+        {
+            var no=document.getElementById("no").value;
+            var array=new Array(no);
+            var sum=0;
+            for (var i=0;i<no;i++)
+        {
+            array[i]=parseInt(prompt("Enter array element "+i));
+            sum=sum+array[i];
+        } 
+        document.getElementById("op").innerHTML="sum is:"+sum;
+        }
+    </script>
+</head>
+<body>
+    <h1><center>Sum of elements in a array</center></h1>
+    <input type="number" id="no" placeholder="Enter array size">
+    <br>
+    <button onclick="dispsum()">Sum</button>
+    <div id="op"></div>
+</body>
+</html>

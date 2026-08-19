@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sumofeven()
+        {
+            var no=parseInt(document.getElementById("no").value);
+            var arr=new Array(no);
+            var sum=0;
+            for(var i=0;i<no;i++)
+        {
+            arr[i]=parseInt(prompt("Enter array element "+i));
+            if(arr[i]%2==0)
+            sum=sum+arr[i];
+        }document.getElementById("res").innerHTML="sum of even no's:"+sum;
+
+        }
+    </script>
+</head>
+<body>
+    <h5>sum of even numbers in an array</h5>
+    <input type="text" id="no" placeholder="Enter array size">
+    <br>
+    <input type="button" onclick="sumofeven()" value="even sum">
+    <div id="res"></div>
+</body>
+</html>
