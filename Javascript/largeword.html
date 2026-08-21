@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function find()
+        {
+        var word=document.getElementById("tb").value+" ";
+        var count1=0;
+        var count2=0;
+        var cword="";
+        var lword="";
+        var len=word.length;   
+        for(var i=0;i<len;i++)
+    { if((word.charAt(i)>='a' && word.charAt(i)<='z') || (word.charAt(i)>='A' && word.charAt(i)<='Z'))
+        {count2++;
+        cword=cword+word.charAt(i);
+        }
+        else if (word.charAt(i)==' ')
+        {
+        if(count2>count1)
+        {
+        count1=count2;
+        lword=cword;
+       } 
+       count2=0;
+       cword="";
+    }
+    }document.write("The biggest word:"+lword);
+} 
+    </script>
+</head>
+<body>
+    <h3>Find the largest word</h3>
+    <input type="text" id="tb" placeholder="Enter a sentence"><br>
+    <button onclick="find()">Click</button>
+</body>
+</html>

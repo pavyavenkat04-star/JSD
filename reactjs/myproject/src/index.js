@@ -5,9 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+//var stud={rno:1001,sname:"xxxx",mark:93,result:"Pass",iseligible:true}
+var stud={rno:1001,sname:"swathi",marks:[80,83,90,66],result:null}
 root.render(
   <React.StrictMode>
-    <App />
+    <App data={stud}/>
   </React.StrictMode>
 );
 

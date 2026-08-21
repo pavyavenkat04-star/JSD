@@ -1,4 +1,168 @@
+import React from 'react'
+
+function App(props) {
+  var arr=[];
+  for (var i in props.data)
+  {
+    arr.push(i);
+  }
+  return (
+    <div>
+      <h2>Json with array handling and also check null </h2>
+      <h2>Student roll no:{props.data.rno}</h2>
+      <h2>Student name:{props.data.sname}</h2>
+      <h2>Student marks 1:{props.data.marks[0]}</h2>
+      <h2>Student marks 2:{props.data.marks[1]}</h2>
+      <h2>Student marks 3:{props.data.marks[2]}</h2>
+      <h2>Student marks 4:{props.data.marks[3]}</h2>
+      <h2>Result:{(props.data.marks[0]>34 &&props.data.marks[1]>34 && props.data.marks[2]>34 &&props.data.marks[3]>34)?"Pass":"Fail"}</h2>
+      <h2>--------------------------</h2>
+      {arr.map((i,ind)=><><br></br>{i}-----&gt;{props.data[i]}</>)}
+    </div>
+  )
+}
+
+export default App
+
+
+
+
+
+
+
+
+
+
+/*import React from 'react'
+
+function App(props) {
+  var arr=[]
+  for(var k in props.data)
+  {
+    arr.push(k)
+  }
+  return (
+    <div>
+      {arr.map((v)=><h2>{v}----&gt;{props.data[v]}</h2>)}
+    <h2>------------------------------------------------</h2>
+    {arr.map((v)=><h2>{v}----&gt;{(props.data[v]===true && "Eligible")||(props.data[v]===false && "Not eligible")||props.data[v]}</h2>)}
+    
+    </div>
+  )
+}
+export default App
+
+
+/*import React from 'react'
+
+export default App;
+ function App(props) {
+  return (
+    <div>
+      <h2>Student details:{props.data.rno}</h2>
+      <h2>Student id:{props.data.rno}</h2>
+      <h2>Student name:{props.data.sname}</h2>
+      <h2>Student marks:{props.data.mark}</h2>
+      <h2>Student result:{props.data.mark>=35?"Pass":"Fail"}</h2>
+      <h2>Is student eligible:{props.data.iseligible?"  eligible":"is not eligible"}</h2>
+    
+    </div>
+  )
+}
+
+
+/*import React from 'react'
+function App(props)
+{
+  return (
+    <div>
+      <h1>props:Properties</h1>
+      <h2>shares data from one component to another component</h2>
+      <h2>Marks:</h2>
+      {props.data.map((i,r)=><><br></br>Marks:{r+1}={i}</>)}
+    </div>
+  )
+}
+export default App;
+
+
+
+
+/*import React from 'react'
 function App()
+{
+  var stud={
+    sno:1001,
+    sname:'pavya',
+    mark:{ tamil:98,
+      english:88,
+      maths:80,
+      science:99,
+      social:88
+    },
+    result:"pass"
+  }
+  return (
+    <div>
+      <h1>Json</h1>
+      <h3>Student id:{stud.sno}</h3>
+      <h3>Student name:{stud.sname}</h3>
+      <h3>Student tamil mark:{stud.mark['tamil']}</h3>
+      <h3>Student english mark:{stud.mark['english']}</h3>
+      <h3>Student maths mark:{stud.mark.maths}</h3>
+      <h3>Student science mark:{stud.mark['science']}</h3>
+      <h3>Student social mark:{stud.mark.social}</h3>
+      <h3>Student result:{stud.result}</h3>
+      
+    </div>
+  )
+}export default App;
+
+
+
+
+
+/*import React from 'react'
+function App() {
+  var arr=[11,22,333,44,5555,66,77]
+  var small=arr[0]
+  return (
+    <div>
+      <h3>Finding lowest number</h3>
+    <div style={{display:"none"}}>
+    {arr.map((v)=><>{small>v &&<>{small=v}</>}</>)}
+    </div>
+    <h4>Smallest number:{small}</h4>
+    </div>
+  )
+}
+export default App;
+
+
+
+/*import React from 'react'
+function App()
+{
+  var arr=[11,83,40,78,100]
+  return (
+    <div>
+      <h3>Array Demo</h3>
+      
+       {arr.map((item)=>item)}
+       <br></br>
+       {arr.map((item)=><> {item}</>)}
+       {arr.map((item)=><><br></br>{item}</>)}
+       <ol type="1">
+        {arr.map((v)=><li>{v}</li>)}
+       </ol>
+      
+    </div>
+  )
+}export default App;
+
+
+
+/*function App()
 {
   var arr=[11,22,33,44,55,66];
   return(

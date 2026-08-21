@@ -11,20 +11,21 @@
             var arr=new Array(no);
              var arr2=new Array(no);
              var z=0;
-            var ele=0;
+             var ele=0;
              for (var i=0;i<no;i++)
              {
                 arr[i]=parseInt(prompt("enter element "+i));
              }
 
             for (var i=0;i<no;i++)
-        {ele=arr[i];
+            {ele=arr[i];
             for (var j=i+1;j<no;j++)
             {
             if (ele>arr[j])
             {
                 ele=arr[j];
                 arr[j]=arr[i];
+                arr[i]=ele;
             }
             else if(ele<arr[j])
             continue;
