@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+       #menu #menuitem
+       {display:block;
+        }
+        a{
+            text-decoration:none;
+            padding:5px;
+            color:black;
+            background-color:grey;
+        }
+        #dropdown
+        {
+            display:inline-block;
+        }
+        #menu{
+            display:none;
+        }
+        #dropdown:hover #menu
+        {
+            display:block;
+        }
+        #but1
+        {
+            cursor:pointer;
+            border: grey;
+            background-color: beige;
+            border-radius: 5px;
+            font-size: 25px;
+            box shadow:5px 5px 10px 2px grey;
+        }
+        #but1:hover
+        {
+            background-color: burlywood;
+            color:brown;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <h2><center>Dropdown without bootstrap</center></h2>
+    <div id="dropdown">
+    <button id="but1" >Dropdown</button>
+    <div id="menu">
+        <a href="#" id="menuitem">Home</a>
+        <a href="#" id="menuitem">Academics</a>
+        <a href="#" id="menuitem">Admissions</a>
+        <a href="#" id="menuitem">Administraion</a>
+        <a href="#" id="menuitem">Help</a>
+    </div>
+</div>
+</body>
+</html>

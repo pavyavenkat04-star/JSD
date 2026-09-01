@@ -40,7 +40,6 @@ function App() {
       {result!==null && result.cod===200 &&<><h2>sea-level:{result.main.sea_level}</h2></>}
       {result!==null && result.cod===200 &&<><h2>Co-ord(lat lon):{result.coord.lat}  -  {result.coord.lon}</h2></>}
       {result!==null && result.cod==="404" && <font color='red' size='5'><b>Result:{result.message}</b></font>}
-
     </div>
   )
 }
