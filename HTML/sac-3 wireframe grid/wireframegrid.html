@@ -1,1140 +1,172 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>SAC-3 Extra Challenge - Wireframe Grid</title>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Column Grid</title>
 
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
-            font-family: Arial, sans-serif;
-            background: #f4f6f8;
-            color: #222;
-            min-height: 100vh;
-        }
-        header {
-            background: #222;
-            color: white;
-            padding: 20px;
-            text-align: center;
+            font-family: Arial;
         }
 
-        header h1 {
-            font-size: 28px;
-            margin-bottom: 8px;
-        }
-        header p {
-            color: #ccc;
-            font-size: 14px;
-        }
         .controls {
-            width: 90%;
-            max-width: 1200px;
-            margin: 25px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-        .controls label {
-            font-weight: bold;
-        }
-        #columnCount {
-            width: 80px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
             text-align: center;
-            font-size: 16px;
+            margin: 20px;
         }
-        .control-btn {
-            width: 42px;
-            height: 42px;
-            border: none;
-            border-radius: 6px;
-            background: #333;
-            color: white;
-            font-size: 22px;
-            cursor: pointer;
-        }
-        .control-btn:hover {
-            background: #555;
-        }
-        .grid-container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto 40px;
 
+        button, input {
+            padding: 8px;
+            margin: 5px;
+        }
+        #grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-
-            gap: 15px;
-        }
-
-        .column {
-            min-height: 300px;
-            background: #e8f0fe;
-
-            border: 2px solid #ccc;
-            border-radius: 10px;
-
-            padding: 15px;
-
-            cursor: grab;
-
-            transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease,
-                background-color 0.2s ease;
-        }
-
-        .column:hover {
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
-        }
-
-        .column.dragging {
-            opacity: 0.5;
-            transform: scale(0.98);
-        }
-
-        .column.drag-over {
-            border: 3px dashed #333;
-        }
-        .column-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
             gap: 10px;
-
-            margin-bottom: 20px;
-            padding-bottom: 12px;
-
-            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            margin: 20px;
         }
-
-        .column-title {
-            font-size: 20px;
-            font-weight: bold;
+        .column {
+            padding: 30px;
+            min-height: 150px;
+            background: lightblue;
+            border: 2px solid gray;
         }
-
-        .column-number {
-            font-size: 13px;
-            color: #555;
-            margin-top: 4px;
-        }
-
-        .edit-btn {
-            padding: 8px 12px;
-            border: none;
-            border-radius: 5px;
-
-            background: #222;
-            color: white;
-
-            cursor: pointer;
-        }
-
-        .edit-btn:hover {
-            background: #444;
-        }
-        .column-content {
-            text-align: center;
-            color: #555;
-            padding-top: 60px;
-        }
-
-        .drag-icon {
-            font-size: 35px;
-            margin-bottom: 15px;
-        }
-
-        /* =========================
-           EDIT PANEL
-        ========================= */
-
-        .edit-panel {
-            margin-top: 20px;
-            padding: 15px;
-
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 8px;
-
+        .edit {
             display: none;
         }
-
-        .edit-panel.active {
+        .show {
             display: block;
-        }
-
-        .edit-panel label {
-            display: block;
-            margin-bottom: 6px;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        .edit-panel input[type="text"] {
-            width: 100%;
-            padding: 9px;
-
-            border: 1px solid #ccc;
-            border-radius: 5px;
-
-            margin-bottom: 12px;
-        }
-
-        .edit-panel input[type="color"] {
-            width: 55px;
-            height: 35px;
-
-            border: none;
-            cursor: pointer;
-
-            margin-bottom: 12px;
-        }
-
-        .color-text {
-            width: 100% !important;
-        }
-
-        /* =========================
-           PRESET COLORS
-        ========================= */
-
-        .color-options {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-
-            margin-bottom: 15px;
-        }
-
-        .color-option {
-            width: 30px;
-            height: 30px;
-
-            border-radius: 50%;
-            border: 2px solid #777;
-
-            cursor: pointer;
-        }
-
-        .color-option:hover {
-            transform: scale(1.1);
-        }
-
-        /* =========================
-           SAVE BUTTON
-        ========================= */
-
-        .save-btn {
-            width: 100%;
-            padding: 9px;
-
-            border: none;
-            border-radius: 5px;
-
-            background: #198754;
-            color: white;
-
-            cursor: pointer;
-        }
-
-        .save-btn:hover {
-            background: #157347;
-        }
-
-        /* =========================
-           RESPONSIVE
-        ========================= */
-
-        @media (max-width: 768px) {
-
-            .grid-container {
-                grid-template-columns: 1fr !important;
-            }
-
-            header h1 {
-                font-size: 22px;
-            }
-
-            .controls {
-                width: 95%;
-            }
         }
     </style>
 </head>
-
 <body>
-
-    <!-- =========================
-         HEADER
-    ========================= -->
-
-    <header>
-        <h1>SAC-3 Extra Challenge</h1>
-        <p>Interactive Multi-Column Wireframe</p>
-    </header>
-
-
-    <!-- =========================
-         COLUMN CONTROLS
-    ========================= -->
-
-    <section class="controls">
-
-        <label for="columnCount">
-            Number of Columns:
-        </label>
-
-        <input
-            type="number"
-            id="columnCount"
-            min="1"
-            max="12"
-            value="3"
-        >
-
-        <button
-            class="control-btn"
-            id="decreaseBtn"
-            title="Remove Column"
-        >
-            −
-        </button>
-
-        <button
-            class="control-btn"
-            id="increaseBtn"
-            title="Add Column"
-        >
-            +
-        </button>
-
-    </section>
-
-
-    <!-- =========================
-         GRID
-    ========================= -->
-
-    <main
-        class="grid-container"
-        id="gridContainer"
-    >
-    </main>
-
-
+    <h1 align="center">Column Grid</h1>
+    <div class="controls">
+        <label>Columns:</label>
+        <input type="number" id="count" value="3" min="1">
+        <button onclick="removeColumn()">−</button>
+        <button onclick="addColumn()">+</button>
+    </div>
+    <div id="grid"></div>
     <script>
-
-        /* ==========================================
-           VARIABLES
-        ========================================== */
-
-        const gridContainer =
-            document.getElementById("gridContainer");
-
-        const columnCountInput =
-            document.getElementById("columnCount");
-
-        const increaseBtn =
-            document.getElementById("increaseBtn");
-
-        const decreaseBtn =
-            document.getElementById("decreaseBtn");
-
-
-        let columns = [];
-
-        let draggedColumn = null;
-
-
-        /* ==========================================
-           INITIAL COLUMNS
-        ========================================== */
-
-        function initializeColumns() {
-
-            columns = [];
-
-            for (let i = 1; i <= 3; i++) {
-
-                columns.push({
-                    id: Date.now() + i,
-                    title: "Column " + i,
-                    color: "#e8f0fe"
-                });
-
-            }
-
-            renderColumns();
-        }
-
-
-        /* ==========================================
-           RENDER COLUMNS
-        ========================================== */
-
-        function renderColumns() {
-
-            gridContainer.innerHTML = "";
-
-            const count = columns.length;
-
-            columnCountInput.value = count;
-
-            /*
-                Change CSS Grid column count.
-            */
-
-            gridContainer.style.gridTemplateColumns =
-                `repeat(${count}, minmax(0, 1fr))`;
-
-
-            columns.forEach((column, index) => {
-
-                const columnElement =
-                    createColumnElement(column, index);
-
-                gridContainer.appendChild(columnElement);
-
-            });
-
-        }
-
-
-        /* ==========================================
-           CREATE COLUMN
-        ========================================== */
-
-        function createColumnElement(column, index) {
-
-            const div = document.createElement("div");
-
-            div.className = "column";
-
-            div.draggable = true;
-
-            div.dataset.id = column.id;
-
-            div.style.backgroundColor = column.color;
-
-
-            /* ======================================
-               COLUMN HEADER
-            ====================================== */
-
-            const header =
-                document.createElement("div");
-
-            header.className = "column-header";
-
-
-            const titleContainer =
-                document.createElement("div");
-
-
-            const title =
-                document.createElement("div");
-
-            title.className = "column-title";
-
-            title.textContent = column.title;
-
-
-            const number =
-                document.createElement("div");
-
-            number.className = "column-number";
-
-            number.textContent =
-                "Order: " + (index + 1);
-
-
-            titleContainer.appendChild(title);
-
-            titleContainer.appendChild(number);
-
-
-            /* ======================================
-               EDIT BUTTON
-            ====================================== */
-
-            const editButton =
-                document.createElement("button");
-
-            editButton.className = "edit-btn";
-
-            editButton.textContent = "Edit";
-
-
-            header.appendChild(titleContainer);
-
-            header.appendChild(editButton);
-
-
-            /* ======================================
-               CONTENT
-            ====================================== */
-
-            const content =
-                document.createElement("div");
-
-            content.className = "column-content";
-
-            content.innerHTML = `
-                <div class="drag-icon">☷</div>
-                <p>Drag this column to reorder</p>
-            `;
-
-
-            /* ======================================
-               EDIT PANEL
-            ====================================== */
-
-            const editPanel =
-                document.createElement("div");
-
-            editPanel.className = "edit-panel";
-
-
-            /* TITLE INPUT */
-
-            const titleLabel =
-                document.createElement("label");
-
-            titleLabel.textContent =
-                "Column Title";
-
-
-            const titleInput =
-                document.createElement("input");
-
-            titleInput.type = "text";
-
-            titleInput.value = column.title;
-
-
-            /* COLOR LABEL */
-
-            const colorLabel =
-                document.createElement("label");
-
-            colorLabel.textContent =
-                "Choose Colour";
-
-
-            /* COLOR PICKER */
-
-            const colorPicker =
-                document.createElement("input");
-
-            colorPicker.type = "color";
-
-            colorPicker.value = column.color;
-
-
-            /* DIRECT COLOR VALUE */
-
-            const colorText =
-                document.createElement("input");
-
-            colorText.type = "text";
-
-            colorText.className = "color-text";
-
-            colorText.placeholder =
-                "Enter colour e.g. #ff0000";
-
-            colorText.value = column.color;
-
-
-            /* ======================================
-               PRESET COLORS
-            ====================================== */
-
-            const presetLabel =
-                document.createElement("label");
-
-            presetLabel.textContent =
-                "Preset Colours";
-
-
-            const colorOptions =
-                document.createElement("div");
-
-            colorOptions.className =
-                "color-options";
-
-
-            const presetColors = [
-                "#e8f0fe",
-                "#ffe5e5",
-                "#e5f7e5",
-                "#fff4cc",
-                "#f0e5ff",
-                "#dff7f5",
-                "#ffe5cc",
-                "#eeeeee"
-            ];
-
-
-            presetColors.forEach(color => {
-
-                const option =
-                    document.createElement("div");
-
-                option.className =
-                    "color-option";
-
-                option.style.backgroundColor =
-                    color;
-
-                option.title = color;
-
-
-                option.addEventListener(
-                    "click",
-                    function () {
-
-                        colorPicker.value = color;
-
-                        colorText.value = color;
-
-                        column.color = color;
-
-                        div.style.backgroundColor =
-                            color;
-
-                    }
-                );
-
-
-                colorOptions.appendChild(option);
-
-            });
-
-
-            /* ======================================
-               SAVE BUTTON
-            ====================================== */
-
-            const saveButton =
-                document.createElement("button");
-
-            saveButton.className =
-                "save-btn";
-
-            saveButton.textContent =
-                "Save Changes";
-
-
-            /* ======================================
-               EDIT BUTTON ACTION
-            ====================================== */
-
-            editButton.addEventListener(
-                "click",
-                function (event) {
-
-                    event.stopPropagation();
-
-                    editPanel.classList.toggle("active");
-
-                }
-            );
-
-
-            /* ======================================
-               COLOR PICKER ACTION
-            ====================================== */
-
-            colorPicker.addEventListener(
-                "input",
-                function () {
-
-                    const color =
-                        colorPicker.value;
-
-                    colorText.value = color;
-
-                    column.color = color;
-
-                    div.style.backgroundColor =
-                        color;
-
-                }
-            );
-
-
-            /* ======================================
-               DIRECT COLOR INPUT
-            ====================================== */
-
-            colorText.addEventListener(
-                "input",
-                function () {
-
-                    const color =
-                        colorText.value.trim();
-
-                    /*
-                        Check whether the browser
-                        recognizes the colour.
-                    */
-
-                    const testElement =
-                        document.createElement("div");
-
-                    testElement.style.backgroundColor =
-                        color;
-
-
-                    if (
-                        testElement.style.backgroundColor !== ""
-                    ) {
-
-                        column.color = color;
-
-                        div.style.backgroundColor =
-                            color;
-
-                        /*
-                            Color picker only accepts
-                            hexadecimal colours.
-                        */
-
-                        if (
-                            /^#[0-9A-Fa-f]{6}$/.test(color)
-                        ) {
-
-                            colorPicker.value = color;
-
-                        }
-
-                    }
-
-                }
-            );
-
-
-            /* ======================================
-               SAVE CHANGES
-            ====================================== */
-
-            saveButton.addEventListener(
-                "click",
-                function () {
-
-                    const newTitle =
-                        titleInput.value.trim();
-
-
-                    if (newTitle !== "") {
-
-                        column.title =
-                            newTitle;
-
-                        title.textContent =
-                            newTitle;
-
-                    }
-
-                    editPanel.classList.remove(
-                        "active"
-                    );
-
-                }
-            );
-
-
-            /* ======================================
-               EDIT PANEL APPENDING
-            ====================================== */
-
-            editPanel.appendChild(
-                titleLabel
-            );
-
-            editPanel.appendChild(
-                titleInput
-            );
-
-            editPanel.appendChild(
-                colorLabel
-            );
-
-            editPanel.appendChild(
-                colorPicker
-            );
-
-            editPanel.appendChild(
-                colorText
-            );
-
-            editPanel.appendChild(
-                presetLabel
-            );
-
-            editPanel.appendChild(
-                colorOptions
-            );
-
-            editPanel.appendChild(
-                saveButton
-            );
-
-
-            /* ======================================
-               FINAL COLUMN
-            ====================================== */
-
-            div.appendChild(header);
-
-            div.appendChild(content);
-
-            div.appendChild(editPanel);
-
-
-            /* ======================================
-               DRAG START
-            ====================================== */
-
-            div.addEventListener(
-                "dragstart",
-                function () {
-
-                    draggedColumn = column.id;
-
-                    div.classList.add(
-                        "dragging"
-                    );
-
-                }
-            );
-
-
-            /* ======================================
-               DRAG END
-            ====================================== */
-
-            div.addEventListener(
-                "dragend",
-                function () {
-
-                    div.classList.remove(
-                        "dragging"
-                    );
-
-                    document
-                        .querySelectorAll(".column")
-                        .forEach(col => {
-                            col.classList.remove(
-                                "drag-over"
-                            );
-                        });
-
-                }
-            );
-
-
-            /* ======================================
-               DRAG OVER
-            ====================================== */
-
-            div.addEventListener(
-                "dragover",
-                function (event) {
-
+        let columns = [
+            { title: "Column 1", color: "lightblue" },
+            { title: "Column 2", color: "lightblue" },
+            { title: "Column 3", color: "lightblue" }
+        ];
+        function display() {
+
+            let grid = document.getElementById("grid");
+            grid.innerHTML = "";
+            grid.style.gridTemplateColumns =
+                "repeat(" + columns.length + ", 1fr)";
+            columns.forEach(function(column, index) {
+                let div = document.createElement("div");
+                div.className = "column";
+                div.draggable = true;
+                div.style.backgroundColor = column.color;
+                div.innerHTML = `
+                    <h3>${column.title}</h3>
+                    <p>Order: ${index + 1}</p>
+                    <input type="number"
+                           value="${index + 1}"
+                           min="1"
+                           max="${columns.length}"
+                           onchange="changeOrder(${index}, this.value)">
+                    <button onclick="edit(${index})">
+                        Edit
+                    </button>
+                    <div id="edit${index}" class="edit">
+                        <br>
+                        <input type="text"
+                               id="title${index}"
+                               value="${column.title}">
+                        <input type="text"
+                               id="color${index}"
+                               value="${column.color}">
+                        <button onclick="save(${index})">
+                            Save
+                    </button>
+                        <br>
+                        <button onclick="setColor(${index}, 'lightblue')">
+                            Blue
+                        </button>
+                        <button onclick="setColor(${index}, 'lightgreen')">
+                            Green
+                        </button>
+                        <button onclick="setColor(${index}, 'lightpink')">
+                            Pink
+                        </button>
+                    </div>
+                `;
+                div.ondragstart = function() {
+                    dragged = index;
+                };
+                div.ondragover = function(event) {
                     event.preventDefault();
-
-                    if (
-                        column.id !== draggedColumn
-                    ) {
-
-                        div.classList.add(
-                            "drag-over"
-                        );
-
-                    }
-
-                }
-            );
-
-
-            /* ======================================
-               DRAG LEAVE
-            ====================================== */
-
-            div.addEventListener(
-                "dragleave",
-                function () {
-
-                    div.classList.remove(
-                        "drag-over"
-                    );
-
-                }
-            );
-
-
-            /* ======================================
-               DROP
-            ====================================== */
-
-            div.addEventListener(
-                "drop",
-                function (event) {
-
-                    event.preventDefault();
-
-                    div.classList.remove(
-                        "drag-over"
-                    );
-
-
-                    if (
-                        column.id === draggedColumn
-                    ) {
-                        return;
-                    }
-
-
-                    const draggedIndex =
-                        columns.findIndex(
-                            item =>
-                                item.id ===
-                                draggedColumn
-                        );
-
-
-                    const targetIndex =
-                        columns.findIndex(
-                            item =>
-                                item.id ===
-                                column.id
-                        );
-
-
-                    if (
-                        draggedIndex === -1 ||
-                        targetIndex === -1
-                    ) {
-                        return;
-                    }
-
-
-                    /*
-                        Remove dragged column
-                    */
-
-                    const movedColumn =
-                        columns.splice(
-                            draggedIndex,
-                            1
-                        )[0];
-
-
-                    /*
-                        Insert it at target
-                        position
-                    */
-
-                    columns.splice(
-                        targetIndex,
-                        0,
-                        movedColumn
-                    );
-
-
-                    renderColumns();
-
-                }
-            );
-
-
-            return div;
-
+                };
+                div.ondrop = function() {
+                    let item = columns.splice(dragged, 1)[0];
+                    columns.splice(index, 0, item);
+                    display();
+                };
+                grid.appendChild(div);
+            });
+            document.getElementById("count").value =
+                columns.length;
         }
-
-
-        /* ==========================================
-           ADD COLUMN
-        ========================================== */
-
         function addColumn() {
-
-            if (columns.length >= 12) {
-
-                alert(
-                    "Maximum 12 columns allowed."
-                );
-
-                return;
-
-            }
-
-
-            const number =
-                columns.length + 1;
-
-
             columns.push({
-
-                id:
-                    Date.now() +
-                    Math.random(),
-
-                title:
-                    "Column " + number,
-
-                color:
-                    "#e8f0fe"
-
+                title: "Column " + (columns.length + 1),
+                color: "lightblue"
             });
-
-
-            renderColumns();
-
+            display();
         }
-
-
-        /* ==========================================
-           REMOVE COLUMN
-        ========================================== */
-
         function removeColumn() {
-
-            if (columns.length <= 1) {
-
-                alert(
-                    "At least one column is required."
-                );
-
-                return;
-
+            if (columns.length > 1) {
+                columns.pop();
+                display();
             }
-
-
-            columns.pop();
-
-            renderColumns();
-
         }
-
-
-        /* ==========================================
-           PLUS BUTTON
-        ========================================== */
-
-        increaseBtn.addEventListener(
-            "click",
-            function () {
-
+        document.getElementById("count").onchange = function() {
+            let number = Number(this.value);
+            if (number < 1)
+                number = 1;
+            while (columns.length < number) {
                 addColumn();
-
             }
-        );
-
-
-        /* ==========================================
-           MINUS BUTTON
-        ========================================== */
-
-        decreaseBtn.addEventListener(
-            "click",
-            function () {
-
-                removeColumn();
-
+            while (columns.length > number) {
+                columns.pop();
             }
-        );
-
-
-        /* ==========================================
-           NUMBER INPUT
-        ========================================== */
-
-        columnCountInput.addEventListener(
-            "change",
-            function () {
-
-                let requestedCount =
-                    parseInt(
-                        columnCountInput.value
-                    );
-
-
-                if (
-                    isNaN(requestedCount) ||
-                    requestedCount < 1
-                ) {
-
-                    requestedCount = 1;
-
-                }
-
-
-                if (requestedCount > 12) {
-
-                    requestedCount = 12;
-
-                }
-
-
-                /*
-                    Add columns if required
-                */
-
-                while (
-                    columns.length <
-                    requestedCount
-                ) {
-
-                    addColumn();
-
-                }
-
-
-                /*
-                    Remove columns if required
-                */
-
-                while (
-                    columns.length >
-                    requestedCount
-                ) {
-
-                    columns.pop();
-
-                }
-
-
-                renderColumns();
-
-            }
-        );
-
-
-        /* ==========================================
-           INITIALIZE APPLICATION
-        ========================================== */
-
-        initializeColumns();
-
+            display();
+        };
+        function changeOrder(oldIndex, newIndex) {
+            newIndex = Number(newIndex) - 1;
+            let item = columns.splice(oldIndex, 1)[0];
+            columns.splice(newIndex, 0, item);
+            display();
+        }
+        function edit(index) {
+            document.getElementById(
+                "edit" + index
+            ).classList.toggle("show");
+        }
+        function save(index) {
+            let title = document.getElementById(
+                "title" + index
+            ).value;
+            let color = document.getElementById(
+                "color" + index
+            ).value;
+            columns[index].title = title;
+            columns[index].color = color;
+            display();
+        }
+        function setColor(index, color) {
+            columns[index].color = color;
+            display();
+        }
+        let dragged;
+        display();
     </script>
-
 </body>
 </html>
+

@@ -14,12 +14,9 @@ app.get("/updatefun",async(request,response)=>{
     if(result.modifiedCount===1)
     {
         response.write("<h1>Successfully updated</h1>")
-
     }
     else{
         response.write("<h1>Data not found</h1>")
-
-
     }
     }
     catch(err){
