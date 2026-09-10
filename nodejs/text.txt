@@ -1,0 +1,2 @@
+Programming is the process of creating a set of instructions that tell a computer how to perform a task or solve a problem. 
+At its core, computer programming turns big ideas into small, logical steps that a machine can read and run. 
