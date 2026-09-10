@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Manager</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <span class="navbar-brand mb-0 h1">
+                Task Manager
+            </span>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+
+        <!-- ================= TASK FORM ================= -->
+        <div class="card shadow-sm mb-5">
+            <div class="card-body">
+
+                <h2 class="mb-4">Create Task</h2>
+
+                <form id="taskForm" novalidate>
+
+                    <!-- Task Name -->
+                    <div class="mb-3">
+
+                        <label for="taskName" class="form-label">
+                            Task Name
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="taskName"
+                            placeholder="Enter task name"
+                        >
+
+                        <div class="invalid-feedback">
+                            Please enter a task name.
+                        </div>
+
+                    </div>
+
+
+                    <!-- Description -->
+                    <div class="mb-3">
+
+                        <label for="description" class="form-label">
+                            Description
+                        </label>
+
+                        <textarea
+                            class="form-control"
+                            id="description"
+                            rows="3"
+                            placeholder="Enter task description"
+                        ></textarea>
+
+                        <div class="invalid-feedback">
+                            Please enter a task description.
+                        </div>
+
+                    </div>
+
+
+                    <!-- Assigned To -->
+                    <div class="mb-3">
+
+                        <label for="assignedTo" class="form-label">
+                            Assigned To
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="assignedTo"
+                            placeholder="Enter person name"
+                        >
+
+                        <div class="invalid-feedback">
+                            Please enter the assigned person's name.
+                        </div>
+
+                    </div>
+
+
+                    <!-- Due Date -->
+                    <div class="mb-3">
+
+                        <label for="dueDate" class="form-label">
+                            Due Date
+                        </label>
+
+                        <input
+                            type="date"
+                            class="form-control"
+                            id="dueDate"
+                        >
+
+                        <div class="invalid-feedback">
+                            Please select a due date.
+                        </div>
+
+                    </div>
+
+
+                    <!-- Status -->
+                    <div class="mb-4">
+
+                        <label for="status" class="form-label">
+                            Status
+                        </label>
+
+                        <select
+                            class="form-select"
+                            id="status"
+                        >
+
+                            <option value="">
+                                Select Status
+                            </option>
+
+                            <option value="TODO">
+                                TODO
+                            </option>
+
+                            <option value="IN PROGRESS">
+                                IN PROGRESS
+                            </option>
+
+                            <option value="REVIEW">
+                                REVIEW
+                            </option>
+
+                            <option value="DONE">
+                                DONE
+                            </option>
+
+                        </select>
+
+                        <div class="invalid-feedback">
+                            Please select a task status.
+                        </div>
+
+                    </div>
+
+
+                    <!-- Submit Button -->
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Add Task
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+
+
+        <!-- ================= TASK LIST ================= -->
+
+        <section>
+
+            <h2 class="mb-4">
+                Task List
+            </h2>
+
+            <div
+                id="taskList"
+                class="list-group"
+            >
+
+
+                <!-- TASK 1 -->
+
+                <div class="list-group-item mb-3">
+
+                    <div class="card border-0">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                Create Login Page
+                            </h5>
+
+                            <p class="card-text">
+                                Design and develop the login page.
+                            </p>
+
+                            <p>
+                                <strong>Assigned To:</strong>
+                                Shivani
+                            </p>
+
+                            <p>
+                                <strong>Due Date:</strong>
+                                5-10-2026
+                            </p>
+
+                            <span class="badge text-bg-secondary">
+                                TODO
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TASK 2 -->
+
+                <div class="list-group-item mb-3">
+
+                    <div class="card border-0">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                Design Dashboard
+                            </h5>
+
+                            <p class="card-text">
+                                Create the main dashboard interface.
+                            </p>
+
+                            <p>
+                                <strong>Assigned To:</strong>
+                                Pooja
+                            </p>
+
+                            <p>
+                                <strong>Due Date:</strong>
+                                17-09-2026
+                            </p>
+
+                            <span class="badge text-bg-primary">
+                                IN PROGRESS
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TASK 3 -->
+
+                <div class="list-group-item mb-3">
+
+                    <div class="card border-0">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                Connect API
+                            </h5>
+
+                            <p class="card-text">
+                                Connect frontend with the backend API.
+                            </p>
+
+                            <p>
+                                <strong>Assigned To:</strong>
+                                Latha
+                            </p>
+
+                            <p>
+                                <strong>Due Date:</strong>
+                                18-09-2026
+                            </p>
+
+                            <span class="badge text-bg-warning">
+                                REVIEW
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TASK 4 -->
+
+                <div class="list-group-item mb-3">
+
+                    <div class="card border-0">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                Test Application
+                            </h5>
+
+                            <p class="card-text">
+                                Test all application features.
+                            </p>
+
+                            <p>
+                                <strong>Assigned To:</strong>
+                                Swathi
+                            </p>
+
+                            <p>
+                                <strong>Due Date:</strong>
+                                20-09-2026
+                            </p>
+
+                            <span class="badge text-bg-success">
+                                DONE
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TASK 5 -->
+
+                <div class="list-group-item mb-3">
+
+                    <div class="card border-0">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                Deploy Website
+                            </h5>
+
+                            <p class="card-text">
+                                Deploy the completed application.
+                            </p>
+
+                            <p>
+                                <strong>Assigned To:</strong>
+                                Pavya
+                            </p>
+
+                            <p>
+                                <strong>Due Date:</strong>
+                                22-09-2026
+                            </p>
+
+                            <span class="badge text-bg-secondary">
+                                TODO
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

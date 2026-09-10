@@ -1,0 +1,66 @@
+body {
+    background: #f4f6f9;
+    font-family: Arial, sans-serif;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.card {
+    border-radius: 14px;
+}
+
+.card-body {
+    padding: 24px;
+}
+
+h2 {
+    font-weight: 700;
+    color: #212529;
+}
+
+.form-label {
+    font-weight: 600;
+}
+
+.form-control,
+.form-select {
+    border-radius: 8px;
+    padding: 10px 12px;
+}
+
+.btn {
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+#taskList .list-group-item {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+#taskList .card-body {
+    padding: 18px;
+}
+
+.card-title {
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.card-text {
+    color: #555;
+}
+
+.badge {
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+.invalid-feedback {
+    font-size: 14px;
+}

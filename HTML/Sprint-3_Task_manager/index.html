@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Task Manager</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 30px;
+            background: #f4f6f8;
+            color: #263238;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-container {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        .error {
+            display: block;
+            color: #d32f2f;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        button {
+            border: none;
+            padding: 10px 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        #saveButton {
+            background: #1976d2;
+            color: white;
+        }
+
+        #cancelButton {
+            background: #757575;
+            color: white;
+            margin-left: 8px;
+        }
+
+        .task-list {
+            display: grid;
+            gap: 15px;
+        }
+
+        .task-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .task-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .task-card h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .task-card p {
+            margin: 7px 0;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .status-pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status-in-progress {
+            background: #cce5ff;
+            color: #004085;
+        }
+
+        .status-completed {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .delete-button {
+            background: #d32f2f;
+            color: white;
+            margin-top: 12px;
+        }
+
+        .empty-message {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            color: #777;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Task Manager</h1>
+
+    <div class="form-container">
+
+        <form id="taskForm">
+
+            <div class="form-group">
+
+                <label for="name">
+                    Task Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter task name"
+                >
+
+                <span id="nameError" class="error"></span>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="description">
+                    Description
+                </label>
+
+                <textarea
+                    id="description"
+                    placeholder="Enter task description"
+                ></textarea>
+
+                <span id="descriptionError" class="error"></span>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="assignedTo">
+                    Assigned To
+                </label>
+
+                <input
+                    type="text"
+                    id="assignedTo"
+                    placeholder="Enter person name"
+                >
+
+                <span id="assignedToError" class="error"></span>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="dueDate">
+                    Due Date
+                </label>
+
+                <input
+                    type="date"
+                    id="dueDate"
+                >
+
+                <span id="dueDateError" class="error"></span>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="status">
+                    Status
+                </label>
+
+                <select id="status">
+
+                    <option value="">
+                        Select Status
+                    </option>
+
+                    <option value="Pending">
+                        Pending
+                    </option>
+
+                    <option value="In Progress">
+                        In Progress
+                    </option>
+
+                    <option value="Completed">
+                        Completed
+                    </option>
+
+                </select>
+
+                <span id="statusError" class="error"></span>
+
+            </div>
+
+
+            <button type="submit" id="saveButton">
+                Save
+            </button>
+
+            <button
+                type="button"
+                id="cancelButton"
+            >
+                Cancel
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <div id="taskList" class="task-list"></div>
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
